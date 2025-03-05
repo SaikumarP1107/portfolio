@@ -9,7 +9,7 @@ function About() {
     <div id = 'about'>
         <div className="about-container">
             <div className="about-content">
-                <div class="img-side">
+                <div className="img-side">
                     <img src={WorkingEmoji} alt="emoji" className="work-emoji" />
                     <img src={AboutImage} alt="mee" className="img-side__main-img" />
                     <span>

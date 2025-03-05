@@ -1,36 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
-.homebanner-settings {
-    width: 100%;
-    height: 100vh;
-    background-color: #e5e7eb;
-    font-family: sans-serif;
-}
-
-.homebanner-herocontent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    padding: 5rem;
-    position: relative;
-    margin: 0px 9.5rem;
-    top: 4rem;
-}
-
-.homebanner-text{
-    width: 500px;
-}
-
-.homebanner-image {
-    width: 40%;
-    height: 40%;
-}
-
 .hero-image {
     background-image: url('../assets/heroImage.jpg');
     animation: morph 8s ease-in-out infinite;
@@ -52,20 +19,58 @@
     margin: 2.5rem 0;
 }
 
-.homebanner-title {
-    color: #2d2e32;
-    font-size: 55px;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+.text-animation span {
+    position: relative;
 }
 
-.homebanner-subtitle {
-    color: #555;
-    font-family: Mulish, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.6;
+.text-animation span::before {
+    content: "Web Developer";
+    color: #147efb;
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: #e5e7eb;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #e5e7eb;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid #6c6e71;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Frontend Designer";
+    }
+    21%, 40% {
+        content: "Web Designer";
+    }
+    41%, 60% {
+        content: "Backend Developer";
+    }
+    61%, 80% {
+        content: "MERN Developer";
+    }
+    81%, 100% {
+        content: "FullStack Developer";
+    }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
 }
 
 @keyframes morph {

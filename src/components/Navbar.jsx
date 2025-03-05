@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import React from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.png'
@@ -18,7 +19,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 navbar">
+    <Disclosure as="nav" className="bg-gray-800 p-8">
       {({ open }) => (
         <>
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -35,7 +36,7 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
+              <div className="flex flex-1 items-center justify-center m-8 sm:items-center sm:justify-between">
                 <div className="flex flex-shrink-0 hover:bg-gray-400 rounded-md items-center">
                   {/* <img
                     className="h-8 w-auto"
