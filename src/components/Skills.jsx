@@ -52,12 +52,12 @@ const skills = [
 
 function Skills() {
   return (
-    <section className="bg-gray-200 w-[100%] h-fit pb-9">
-      <div className="ml-19 mr-19">
-        <h2 className="text-3xl mt-10 mb-6 pt-5">
-          <strong>Skills:</strong>
+    <section div id="skills" className="bg-gray-200 w-[100%] h-fit py-3">
+      <div className="mx-19 my-8">
+        <h2 className="text-cyan-800 text-2xl text-center uppercase font-bold mb-7 pb-5">
+          Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-10 mt-3">
           {skills.map((skillSet, index) => (
             <div
               key={index}
@@ -66,7 +66,7 @@ function Skills() {
               <img
                 src={skillSet.image}
                 alt="skills icon"
-                className="w-12 h-12 mb-2 absolute -top-6 left-0 right-0 mx-auto"
+                className="w-14 h-14 mb-2 absolute -top-7 left-0 right-0 mx-auto"
               />
               <h3 className="text-xl font-semibold mb-2">
                 {skillSet.category}

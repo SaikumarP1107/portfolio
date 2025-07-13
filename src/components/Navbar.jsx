@@ -7,9 +7,8 @@ import logo from '../assets/logo.png'
 const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About', href: '#about', current: false },
-  { name: 'Skills', href: '#', current: false },
-  { name: 'Experience', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
+  { name: 'Skills', href: '#skills', current: false },
+  { name: 'Experience', href: '#experience', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
 
@@ -19,7 +18,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 p-8">
+    <Disclosure as="nav" className="bg-cyan-800 p-8">
       {({ open }) => (
         <>
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8">

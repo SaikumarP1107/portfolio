@@ -6,7 +6,10 @@ import Text2 from "../assets/text2.svg";
 
 function About() {
   return (
-    <div id="about">
+    <div id="about" className="bg-gray-200 w-[100%] h-fit py-15">
+      <h3 className="text-cyan-800 text-[24px] text-center mb-7 uppercase font-bold">
+        About me
+      </h3>
       <div className="about-container">
         <div className="about-content">
           <div className="img-side">
@@ -17,7 +20,6 @@ function About() {
             </span>
           </div>
           <div className="text-side">
-            <h3>About me</h3>
             <h4>
               Full Stack Developer <br /> based in Hyderabad, India 📍
             </h4>

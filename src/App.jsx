@@ -5,6 +5,8 @@ import Herobanner from "./components/Herobanner";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
           <Herobanner />
           <About />
           <Skills />
+          <Experience />
           <Contact />
+          <Footer />
         </header>
       </div>
     </>
