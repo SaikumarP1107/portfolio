@@ -3,7 +3,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Herobanner from "./components/Herobanner";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Footer from './components/Footer';

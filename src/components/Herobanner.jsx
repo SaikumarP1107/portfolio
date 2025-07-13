@@ -1,23 +1,49 @@
 import React from 'react';
 import './Homebanner.css';
-import HeroImage  from '../assets/heroImage.jpg';
-import BoyImage  from '../assets/boy.png';
+import HeroImage  from '../assets/images/heroImage.jpg';
+import Resume  from '../assets/files/resume.pdf';
+import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 
 function Herobanner() {
   return (
-    <div className='bg-gray-200 w-[100%] h-fit'>
-        <div className='flex flex-wrap justify-evenly align-center justtify-content-center gap-5 relative top-2'> 
-            <div className='ml-17 w-130 mt-5'>
-                <h1 className='text-5xl font-semibold my-2'>Hi, It's Saikumar</h1>
-                <h3 className='text-animation text-4xl font-semibold min-w-[280px]'>I'm a <span></span></h3>
-                <p className='mt-3 text-xl text-zinc-600 text-2 font-medium text-justify'> with over 4 years of hands-on experience in designing, developing, and deploying high-performance, scalable applications. Expertise spans both frontend and backend development, cloud computing, and automation. Adept at optimizing development workflows, reducing maintenance costs, and driving efficiency through database migrations, cost-effective solutions, and streamlined pipeline automation. Proven track record in team leadership and optimizing project architecture to enhance performance, scalability, and overall system effectiveness.</p>
-                <div className='homebanner-socialmedia'>
-                    <a aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/saikumar-pendyala/"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tabler-icon tabler-icon-brand-linkedin"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"></path><path d="M12 16l0 -5"></path><path d="M16 16v-3a2 2 0 0 0 -4 0"></path></svg></a>
-                    <a aria-label="github" rel="noreferrer" target="_blank" href="https://github.com/SaikumarP1107"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="tabler-icon tabler-icon-brand-github"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg></a>
+    <div id='home' className='bg-gray-100 w-[100%] h-fit'>
+        <div className='flex flex-wrap-reverse justify-evenly align-center justtify-content-center gap-5 md:gap-1 relative top-2'> 
+            <div className='lg:w-130 lg:mt-5 flex flex-col justify-center items-start lg:ml-17 md:w-[50%] md:mt-10 md:ml-0 md:mb-10 sm:mt-1 max-sm:mx-5 max-lg:ml-3'>
+                <h1 className='lg:text-5xl max-lg:text-4xl max-sm:text-2xl font-semibold my-2'>Hi, It's Saikumar</h1>
+                <h3 className='text-animation lg:text-3xl max-lg:text-3xl max-sm:text-2xl font-semibold min-w-[280px]'>I'm a <span></span></h3>
+                <p className='mt-3 text-zinc-600 text-2 font-medium text-justify lg:xl max-lg:text-lg max-sm:text-sm'> with over 4 years of hands-on experience in designing, developing, and deploying high-performance, scalable applications. Expertise spans both frontend and backend development, cloud computing, and automation. Adept at optimizing development workflows, reducing maintenance costs, and driving efficiency through database migrations, cost-effective solutions, and streamlined pipeline automation. Proven track record in team leadership and optimizing project architecture to enhance performance, scalability, and overall system effectiveness.</p>
+                <div className='flex cursor-pointer gap-5 max-sm:my-5 max-sm:pb-5 max-lg:my-6 w-fit items-center'>
+                    <a
+                        href="https://github.com/SaikumarP1107"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-cyan-600 transition"
+                        aria-label="GitHub"
+                    >
+                        <FaGithub size={20} />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/saikumar-pendyala/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-cyan-800 transition"
+                        aria-label="LinkedIn"
+                    >
+                        <FaLinkedin size={20} />
+                    </a>
+                    {/*  Download Resume Button */}
+                    <a
+                        href={Resume}
+                        download
+                        className="flex items-center bg-cyan-800 text-white px-4 py-2 rounded hover:bg-cyan-700 transition text-sm"
+                    >
+                        <FaDownload className="mr-2" />
+                        Resume
+                    </a>
                 </div>
             </div>
-            <div className='w-[40%] h-[40%] justify-items-center mt-5'>
-                <div className='hero-image'></div>
+            <div className='lg:ml-17 mt-5 md:mt-10 md:ml-0 md:mb-10 sm:mt-1 max-sm:ml-4'>
+                <div className={`hero-image hero-image-animation lg:w-40 max-sm:w-60 max-sm:h-60`}></div>
             </div>
         </div>
     </div>

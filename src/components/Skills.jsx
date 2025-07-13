@@ -1,11 +1,11 @@
 import React from "react";
 
-import frontendIcon from "../assets/frontend.svg";
-import backendIcon from "../assets/backend.svg";
-import databaseIcon from "../assets/database.svg";
-import cloudIcon from "../assets/cloud.svg";
-import toolsIcon from "../assets/tools.svg";
-import methodologiesIcon from "../assets/methodologies.svg";
+import frontendIcon from "../assets/images/frontend.svg";
+import backendIcon from "../assets/images/backend.svg";
+import databaseIcon from "../assets/images/database.svg";
+import cloudIcon from "../assets/images/cloud.svg";
+import toolsIcon from "../assets/images/tools.svg";
+import methodologiesIcon from "../assets/images/methodologies.svg";
 
 const skills = [
   {
@@ -52,12 +52,12 @@ const skills = [
 
 function Skills() {
   return (
-    <section div id="skills" className="bg-gray-200 w-[100%] h-fit py-3">
+    <section div id="skills" className="bg-gray-100 w-[100%] h-fit py-3 pb-10">
       <div className="mx-19 my-8">
         <h2 className="text-cyan-800 text-2xl text-center uppercase font-bold mb-7 pb-5">
           Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-10 mt-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-10 mt-3">
           {skills.map((skillSet, index) => (
             <div
               key={index}

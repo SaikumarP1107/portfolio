@@ -1,15 +1,18 @@
 .hero-image {
-    background-image: url('../assets/My-Image.jpg');
-    animation: morph 8s ease-in-out infinite;
-    background-position: 50%;
+    background-image: url('../assets/images/My-Image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border: 3px solid #2d2e32;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    height: 21.875rem;
     position: relative;
-    transition: all 1s ease-in-out;
-    width: 21.875rem;
+}
+
+.hero-image-animation {
+    @media (min-width: 768px) {
+        border: 3px solid #2d2e32;
+        animation: morph 8s ease-in-out infinite;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background-position: 50%;
+        transition: all 1s ease-in-out;
+    }
 }
 
 .homebanner-socialmedia {
@@ -26,17 +29,17 @@
 
 .text-animation span::before {
     content: "Web Developer";
-    color: #147efb;
+    color: oklch(0.45 0.085 224.283);
     animation: words 20s infinite;
 }
 
 .text-animation span::after {
     content: "";
-    background-color: #e5e7eb;
+    background-color: oklch(0.967 0.003 264.542);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid #e5e7eb;
+    border-left: 3px solid #fafbfc;
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }

@@ -17,14 +17,6 @@
   width: 41rem;
 }
 
-.work-emoji {
-  bottom: 4.5rem;
-  position: absolute;
-  left: 4.2rem;
-  width: 3.75rem !important;
-  z-index: 10;
-}
-
 .img-side__main-img {
   border-radius: 1.7rem;
   height: 21.875rem;
@@ -35,40 +27,9 @@
   position: relative;
 }
 
-.img-side span {
-  background-color: #fff;
-  border-radius: 50%;
-  bottom: -3rem;
-  height: 11.875rem;
-  position: absolute;
-  right: 1.5rem;
-  width: 11.875rem;
-}
-
-.img-side span .text-image {
+.text-image {
   -webkit-animation: rotate 9s linear infinite;
   animation: rotate 9s linear infinite;
-  width: 11.875rem;
-}
-
-.text-side h4 {
-  color: #2d2e32;
-  font-family: Poppins, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-}
-
-.text-side p {
-  color: #767676;
-  font-family: Mulish, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.text-image {
-  position: absolute;
 }
 
 @keyframes rotate {

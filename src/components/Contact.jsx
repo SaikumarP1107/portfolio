@@ -3,14 +3,14 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className="bg-gray-200 w-[100%] mx-auto p-6 text-center">
+    <section className="bg-gray-100 w-[100%] mx-auto p-6 text-center py-18 max-sm:py-8" id="contact">
       <h2 className="text-2xl text-cyan-800 font-bold mb-7">Contact Me</h2>
       <p className="mb-8 text-gray-600">
         I’d love to hear from you — whether it’s about a project, opportunity, or just to say hi!
       </p>
 
       {/* Contact Form */}
-      <form className="space-y-6 mx-100">
+      <form className="space-y-6 mx-[15%]">
         <div className="flex flex-col md:flex-row gap-4">
           <input
             type="text"
@@ -42,7 +42,7 @@ const Contact = () => {
       {/* Social Links */}
       <div className="mt-12 flex justify-center gap-6 text-2xl text-cyan-600">
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/saikumar-pendyala"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-800 transition"
@@ -50,7 +50,7 @@ const Contact = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/SaikumarP1107"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-cyan-800 transition"
@@ -58,15 +58,7 @@ const Contact = () => {
           <FaGithub />
         </a>
         <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-cyan-800 transition"
-        >
-          <FaTwitter />
-        </a>
-        <a
-          href="mailto:youremail@example.com"
+          href="mailto:pendylasaikumar1107@gmail.com"
           className="hover:text-cyan-800 transition"
         >
           <FaEnvelope />
