@@ -32,7 +32,7 @@ function Experience() {
 
       <div className="relative w-full max-w-5xl mx-auto px-4">
         {/* Vertical Timeline Line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-cyan-800 h-full z-0 hidden sm:block"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-cyan-800 h-full z-0 hidden lg:block"></div>
 
         {/* Timeline Items */}
         <div className="relative z-10 flex flex-col gap-10 max-sm:gap-2">

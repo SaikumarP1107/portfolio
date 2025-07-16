@@ -42,8 +42,8 @@ function Herobanner() {
                     </a>
                 </div>
             </div>
-            <div className='lg:ml-17 lg:mt-10 md:mt-15 md:ml-0 md:mb-10 sm:mt-1 max-sm:ml-4'>
-                <div className={`hero-image hero-image-animation lg:w-85 lg:h-85 max-sm:w-60 max-sm:h-60`}></div>
+            <div className='lg:ml-17 lg:mt-10 md:mt-15 md:ml-0 md:mb-10 sm:mt-1 max-sm:ml-4 content-center'>
+                <div className={`hero-image hero-image-animation lg:w-85 lg:h-85 md:w-80 md:h-80 sm:w-70 sm:h-70 max-sm:w-60 max-sm:h-60`}></div>
             </div>
         </div>
     </div>

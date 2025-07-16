@@ -29,7 +29,7 @@ function Projects() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:px-10 max-sm:px-5">
           {projects.map((project) => (
             <Cards 
               key={project.id}
