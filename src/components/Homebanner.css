@@ -15,13 +15,6 @@
     }
 }
 
-.homebanner-socialmedia {
-    cursor: pointer;
-    display: flex;
-    gap: 1.3rem;
-    margin: 2.5rem 0;
-    width: fit-content;
-}
 
 .text-animation span {
     position: relative;

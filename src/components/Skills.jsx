@@ -52,7 +52,7 @@ const skills = [
 
 function Skills() {
   return (
-    <section div id="skills" className="bg-gray-100 w-[100%] h-fit py-3 pb-10">
+    <section div id="skills" className="bg-gray-100 w-[100%] h-fit py-3 pb-10 relative">
       <div className="mx-19 my-8">
         <h2 className="text-cyan-800 text-2xl text-center uppercase font-bold mb-7 pb-5">
           Skills
@@ -73,7 +73,7 @@ function Skills() {
               </h3>
               <ul className="list-disc pl-5 flex gap-2 flex-col flex-wrap h-40">
                 {skillSet.skills.map((skill, idx) => (
-                  <li key={idx} className="text-gray-700 list-none ">
+                  <li key={idx} className="text-gray-700 max-md:text-sm list-none ">
                     &#10003;{skill}
                   </li>
                 ))}

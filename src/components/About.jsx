@@ -6,7 +6,7 @@ import Text2 from "../assets/images/text2.svg";
 
 function About() {
   return (
-    <div id="about" className="bg-gray-200 w-full py-16 max-sm:py-8">
+    <div id="about" className="bg-gray-200 w-full py-16 max-sm:py-8 relative">
       <h3 className="text-cyan-800 text-2xl md:text-3xl text-center mb-10 max-sm:mb-5 uppercase font-bold">
         About me
       </h3>
@@ -24,7 +24,7 @@ function About() {
             <img
               src={WorkingEmoji}
               alt="emoji"
-              className="absolute w-16 md:w-20 max-sm:w-10 max-sm:bottom-[35%] bottom-[60%] left-1/2 transform -translate-x-1/2"
+              className="absolute w-16 md:w-20 max-md:w-10 max-sm:w-10 max-sm:bottom-[35%] bottom-[35%] left-1/2 transform -translate-x-1/2"
             />
             <img
               src={Text2}

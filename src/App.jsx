@@ -5,6 +5,7 @@ import Herobanner from "./components/Herobanner";
 import Navbar from "./components/Navbar";
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <About />
           <Skills />
           <Experience />
+          <Projects />
           <Contact />
           <Footer />
         </header>

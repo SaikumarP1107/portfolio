@@ -3,10 +3,11 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
+  { name: "Home", href: "#home", current: true },
   { name: "About", href: "#about", current: false },
   { name: "Skills", href: "#skills", current: false },
   { name: "Experience", href: "#experience", current: false },
+  { name: "Projects", href: "#projects", current: false },
   { name: "Contact", href: "#contact", current: false },
 ];
 
@@ -25,6 +26,32 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (href, close) => {
+    // Close mobile menu if provided
+    let navbarHeight = -55; // Increased offset for more space
+
+    if (close) {
+      close();
+      navbarHeight = -350; // Increased offset for more space
+    }
+    
+    // Handle smooth scroll with offset for navbar
+    if (href.startsWith('#')) {
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const elementPosition = targetElement.offsetTop;
+        const offsetPosition = elementPosition + navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
 
   return (
     <Disclosure
@@ -65,10 +92,14 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.href);
+                    }}
                     className={classNames(
-                      "font-bold transition-colors",
+                      "font-bold transition-colors cursor-pointer",
                       isSticky
-                        ? "text-white hover:text-cyan-300"
+                        ? "text-white hover:underline hover:drop-shadow-md"
                         : "text-cyan-800 hover:text-cyan-600"
                     )}
                   >
@@ -81,17 +112,23 @@ export default function Navbar() {
 
           {/* Mobile panel */}
           <Disclosure.Panel className="md:hidden bg-white shadow-md">
-            <div className="px-4 pt-2 pb-4 space-y-1">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-cyan-800 hover:bg-cyan-100 hover:text-cyan-900"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
+            {({ close }) => (
+              <div className="px-4 pt-2 pb-4 space-y-1">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.href, close);
+                    }}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-cyan-800 hover:bg-cyan-100 hover:text-cyan-900 cursor-pointer"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </Disclosure.Panel>
         </>
       )}

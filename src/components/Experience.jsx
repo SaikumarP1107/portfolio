@@ -22,7 +22,7 @@ function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-gray-200 w-full py-12">
+    <section id="experience" className="bg-gray-200 w-full py-12 relative">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
         <span className="text-cyan-800">Experience</span>
