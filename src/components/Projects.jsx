@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Cards from './Cards';
+import projectImage from '../assets/images/project-resume-analyzer.png'; // Replace with your actual image path
 
 function Projects() {
   // Sample project data - you can replace with your actual projects
@@ -11,7 +12,7 @@ function Projects() {
       id: 1,
       title: "AI Smart CV Scan",
       description: "This project is to scan Resume based on Job Description using AI and extract relevant information.",
-      image: "/src/assets/images/project-resume-analyzer.png", // Replace with your actual image path
+      image: projectImage,
       technologies: ["react.js", "Node.js", "Express.js", "tailwindcss", "OpenAI API", "Claude Sonnet"],
       githubLink: "https://github.com/SaikumarP1107/resume-analyzer",
       liveLink: "https://smartcvscan.web.app/"
